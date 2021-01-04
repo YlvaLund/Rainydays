@@ -1,0 +1,10 @@
+body {
+  background: rgb(255, 255, 255);
+  padding: 0px;
+  margin: 0px;
+}
+.mainimage {
+  background-image: url("/images/hovedbilde.jpg");
+  min-height: 80vh;
+  background-size: cover;
+}
