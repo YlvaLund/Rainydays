@@ -2,9 +2,88 @@ body {
   background: rgb(255, 255, 255);
   padding: 0px;
   margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .mainimage {
   background-image: url("/images/hovedbilde.jpg");
-  min-height: 80vh;
+  min-height: 90vh;
   background-size: cover;
+  background-position: bottom;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 15vh;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #597894, #253d4f);
+}
+
+#topleftlogo {
+  height: 10vh;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu li {
+  list-style: none;
+}
+
+#subnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px 0px;
+}
+
+#subnav form {
+  justify-self: end;
+  margin-right: 2vw;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+#subnav form input[type="text"],
+#subnav form input[type="submit"] {
+  border: 1px solid black;
+  outline: none;
+  padding: 6px 4px;
+}
+
+#subnav form input[type="text"] {
+  border-radius: 20px 0 0 20px;
+  width: 20vw;
+}
+
+#subnav form input[type="submit"] {
+  border-radius: 0 20px 20px 0;
+}
+
+.linkholder {
+  position: relative;
+  top: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+#linkWoman,
+#linkMan {
+  background: black;
+  width: 35vw;
+  height: 25vh;
 }

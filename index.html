@@ -3,14 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainydays | Home</title>
+    <meta name="author" content="Ylva Lund" />
+
+    <title>Rainydays | Raincoats made for an adventure</title>
     <link rel="stylesheet" href="styles/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html"
-          ><img src="images/RainyDays_Logo.svg" alt="company logo"
+          ><img
+            src="images/RainyDays_Logo.svg"
+            alt="company logo"
+            id="topleftlogo"
         /></a>
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
@@ -20,28 +32,24 @@
           <li><a href="login.html">Log In</a></li>
           <li><a href="cart.html">Cart</a></li>
         </ul>
-        <aside>
-          <span class="breadcrumb"></span>
-          <form>
-            <input type="text" placeholder="Search..." id="searchbar" />
-          </form>
-        </aside>
       </nav>
+      <aside id="subnav">
+        <span class="breadcrumb">Home</span>
+        <form onSubmit="" action="" method="" autocomplete="off">
+          <input type="text" placeholder="Search..." id="searchbar" /><input
+            type="submit"
+            id="submitbutton"
+            value=""
+          />
+        </form>
+      </aside>
       <section class="mainimage">
         <div class="linkholder">
-          <section>
-            <img
-              src="images/main_woman.jpg"
-              alt="back of the head of a woman with a yellow raincoat"
-            />
-            <button>Women</button>
+          <section id="linkWoman">
+            <button id="womanbutton">Women</button>
           </section>
-          <section>
-            <img
-              src="images/main_men.jpg"
-              alt="back of the head of a woman with a yellow raincoat"
-            />
-            <button>Men</button>
+          <section id="linkMan">
+            <button id="manbutton">Men</button>
           </section>
         </div>
       </section>
@@ -50,15 +58,26 @@
       <header>
         <img src="images/RainyDays_Logo.svg" alt="company logo" />
       </header>
-      <div>
+      <div class="three_column">
         <section>
-          <p>hh</p>
+          <p>Contact</p>
+          <p>13 13 13 13</p>
+          <p>Delivery</p>
+          <p>About us</p>
         </section>
         <section>
-          <p>hh</p>
+          <p>Rainydays Retail AS</p>
+          <p>East Moutain Road 21</p>
+          <p>N-5214 Toppen</p>
+          <p>Org.nr. 555 555 555</p>
+          <p>Service@rainydays.com</p>
         </section>
         <section>
-          <p>hh</p>
+          <p>Social media</p>
+          <p class="three_column">
+            <i class="fab fa-instagram"></i><i class="fab fa-facebook"></i
+            ><i class="fab fa-twitter"></i>
+          </p>
         </section>
       </div>
     </footer>
