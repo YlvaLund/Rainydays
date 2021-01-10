@@ -34,14 +34,23 @@ nav {
 .menu a {
   color: white;
   text-decoration: none;
+  display: grid;
 }
 
-.menu a:hover {
+.menu a span:hover {
   text-decoration: underline;
 }
 
 .menu li {
   list-style: none;
+}
+
+.menu a i,
+.menu a span {
+  justify-self: center;
+}
+.menu a i {
+  font-size: 1.5rem;
 }
 
 #subnav {
@@ -58,7 +67,7 @@ nav {
 }
 
 #subnav form input[type="text"],
-#subnav form input[type="submit"] {
+#submitbutton {
   border: 1px solid black;
   outline: none;
   padding: 6px 4px;
@@ -69,7 +78,7 @@ nav {
   width: 20vw;
 }
 
-#subnav form input[type="submit"] {
+#submitbutton {
   border-radius: 0 20px 20px 0;
 }
 
@@ -86,4 +95,56 @@ nav {
   background: black;
   width: 35vw;
   height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 5px solid white;
+}
+
+#linkWoman {
+  background-image: url("/images/main_woman.jpg");
+}
+
+#linkMan {
+  background-image: url("/images/main_men.jpg");
+}
+
+#womanbutton,
+#manbutton {
+  border: none;
+  outline: none;
+  height: 7vh;
+  width: 15vw;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #597894, #253d4f);
+  position: relative;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+footer {
+  background: #597894;
+  margin-top: 15vh;
+  padding: 3vh 0;
+}
+
+#footerlogo {
+  height: 10vh;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.breadcrumb {
+  color: #253d4f;
+  align-self: center;
+}
+
+.three_column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
 }
