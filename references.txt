@@ -1,0 +1,4 @@
+References:
+
+https://stackoverflow.com/questions/12912048/how-to-maintain-aspect-ratio-using-html-img-tag
+ - Found how to set correct aspectratio on the img tag.
