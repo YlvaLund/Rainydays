@@ -207,3 +207,7 @@ footer {
 #subnav form input[type="text"] {
   width: 50vw;
 }
+
+.form__input {
+  display: block;
+}
