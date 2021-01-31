@@ -2,3 +2,12 @@ References:
 
 https://stackoverflow.com/questions/12912048/how-to-maintain-aspect-ratio-using-html-img-tag
  - Found how to set correct aspectratio on the img tag.
+
+ https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers
+  - html autocomplete for creditcard forms.
+
+  https://stackoverflow.com/questions/45456328/html5-pattern-for-cc-expiry-mm-yy
+  - html regex pattern for creditcard exp date.
+
+  https://www.w3schools.com/tags/tag_button.asp
+  - How to make a button.
