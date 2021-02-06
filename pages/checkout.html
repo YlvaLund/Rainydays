@@ -48,12 +48,26 @@
       </aside>
     </header>
     <main>
-      <form autocomplete="on" method="POST" action="#">
+      <!-- Added the form to wrap the whole page  -->
+      <form autocomplete="on" method="POST" action="#" id="checkout_form">
         <section>
-          <div>
+          <div class="one_grid">
             <h3>Review Your shopping bag</h3>
+            <section class="item_list">
+              <img src="../images/Jacket list back.jpg" class="inshoppingbag" />
+              <div class="order_description">
+                <p>RAINYDAYS Jacket title</p>
+                <p>Size: M</p>
+                <p>Quanitiy: 1</p>
+              </div>
+            </section>
+            <section class="item_list_pricing">
+              <p><span>Jacket title</span><span>799,-</span></p>
+              <p><span>Shipping fees</span><span>99,-</span></p>
+              <p class="subtotal"><span>Total cost</span><span>898,-</span></p>
+            </section>
           </div>
-          <div>
+          <div class="one_grid">
             <h3>Payment options</h3>
             <input type="radio" id="vipps" name="payment" value="vipps" />
             <label for="vipps">Vipps</label>
@@ -70,7 +84,7 @@
           </div>
         </section>
         <section>
-          <div>
+          <div class="one_grid">
             <h3>Billing and Shipping information</h3>
             <label for="fname">First name</label>
             <input type="text" name="fname" id="fname" class="form__input" required />
