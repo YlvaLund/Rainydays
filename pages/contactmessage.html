@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Ylva Lund" />
 
-    <title>Rainydays | Raincoats made for an adventure | Jacket spesific</title>
+    <title>Rainydays | Raincoats made for an adventure | Contact</title>
     <link rel="stylesheet" href="../styles/styles.css" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
@@ -47,49 +47,28 @@
         </form>
       </aside>
     </header>
-    <main>
+    <div class="popup message">
+      <h2 class="message title">Message sent!</h2>
+      <p>Thank you for contacting us, You will hear from us within 24hours.</p>
+    </div>
+    <main class="mainimage">
       <aside class="popup">
-        <h3>Shopping bag</h3>
-        <div class="listeditems">
-          <div>
-            <img src="../images/Jacket list back.jpg" alt="yellow raincoat back" />
-            <p>Size <span class="detail">M</span></p>
-            <p>Quantity <span class="detail">1</span></p>
-          </div>
-          <section>
-            <h4><span>Yellow raincoat</span><span class="detail">799,- NOK</span></h4>
-            <p><span>Total cost: </span><span class="detail">799,- NOK</span></p>
-          </section>
-        </div>
-        <button class="cta">Checkout</button>
+        <form method="GET">
+          <h2>Contact us</h2>
+          <fieldset>
+            <legend>name details</legend>
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="name" class="form__input" />
+            <label for="email">Your email adress</label>
+            <input type="email" name="email" id="email" class="form__input" />
+          </fieldset>
+          <fieldset>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea>
+          </fieldset>
+          <input class="btn" type="submit" value="Send" />
+        </form>
       </aside>
-
-      <section>
-        <div>
-          <img src="../images/Jacket list back.jpg" alt="jacket specific back" />
-        </div>
-        <div>
-          <img src="../images/Jacket list front.jpg" alt="jacket specific front" />
-        </div>
-      </section>
-      <section>
-        <div>
-          <h1>Jacket title</h1>
-          <p>Price: 799,-</p>
-          <p>Description: Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-        </div>
-        <div>
-          <p>Select size:</p>
-          <input type="radio" name="size" value="xs" id="xs" /><label for="xs">XS</label> <input type="radio" name="size" value="s" id="s" /><label for="s">S</label> <input type="radio" name="size" value="m" id="m" /><label for="m">M</label> <input type="radio" name="size" value="l" id="l" /><label
-            for="l"
-            >L</label
-          >
-          <input type="radio" name="size" value="xl" id="xl" /><label for="xl">XL</label> <input type="radio" name="size" value="xxl" id="xxl" /><label for="xxl">XXL</label>
-        </div>
-        <button class="cta" type="submit">Add to wish list</button>
-        <button class="cta" type="submit">Add to Cart</button>
-      </section>
     </main>
 
     <footer>
