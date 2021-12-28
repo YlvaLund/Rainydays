@@ -29,6 +29,7 @@ nav {
 }
 #topleftlogo {
   grid-area: logo;
+  width: 150px;
 }
 
 label[for="hamburger-menu"] {
@@ -301,14 +302,14 @@ label {
   border-top: 2px solid var(--color-theme);
 }
 
+.activeLink {
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid white;
+}
+
 /* IPAD! - media queries */
 
 @media screen and (min-width: 550px) and (max-width: 1100px) {
-  #topleftlogo {
-    height: 150px;
-    margin-left: 5vw;
-  }
-
   label[for="hamburger-menu"] {
     font-size: 4rem;
     margin-right: 5vw;
@@ -443,8 +444,15 @@ label {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
+
+  nav a {
+    display: grid;
+    padding: 10px;
+  }
+
   #topleftlogo {
-    width: 200px;
+    width: 150px;
+    place-self: center;
   }
 
   #gallery {
