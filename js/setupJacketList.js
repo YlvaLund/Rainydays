@@ -1,9 +1,8 @@
+let params = new URLSearchParams(window.location.search);
+let category = params.get("gender");
+
 function setup() {
     const jacketContainer = document.getElementById("jacketContainer");
-    console.log(jacketContainer);
-    let params = new URLSearchParams(window.location.search);
-    let category = params.get("gender");
-    console.log(category);
     
     if (raincoats.length > 0){
         for (let r of raincoats){
@@ -26,5 +25,41 @@ function setup() {
         }
     }
 }
+
+/* Setup filter for genders */
+let filter_male = document.getElementById("filter_men");
+let menSelected = false;
+let filter_women = document.getElementById("filter_women");
+let womenSelected = false;
+
+switch(category) {
+    case 'men':
+        filter_male.classList.add("selected");
+        menSelected = true;
+        break;
+    case 'women':
+        filter_women.classList.add("selected");
+        womenSelected = true;
+        break;
+    default:
+        // none are selected
+        break;
+}
+
+filter_male.addEventListener("click", () => {
+    if(menSelected) {
+        window.location = "/pages/listofjackets.html"
+    } else {
+        window.location = "/pages/listofjackets.html?gender=men"
+    }
+});
+
+filter_women.addEventListener("click", () => {
+    if(womenSelected) {
+        window.location = "/pages/listofjackets.html"
+    } else {
+        window.location = "/pages/listofjackets.html?gender=women"
+    }
+});
 
 setup();

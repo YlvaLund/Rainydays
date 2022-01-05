@@ -2,6 +2,7 @@ let params = new URLSearchParams(window.location.search);
 let itemId = params.get("item");
 itemId = parseInt(itemId);
 let triggered = false;
+
 for (let i = 0; i < raincoats.length; i++){
     if (raincoats[i].id === itemId){
         triggered = updateDOM(raincoats[i])
@@ -11,7 +12,6 @@ if (!triggered){
     /* not sure if this is the best experience, but we do not want people on our site while the item is not  */
     history.back()
 }
-
 
 function updateDOM(item){
     if (typeof item?.id === 'undefined'){
@@ -49,7 +49,7 @@ function updateDOM(item){
             let alreadyStored = getStoredCart();
             let cart = [];
             let alreadyExists = false;
-            if (alreadyStored.length > 0){
+            if (alreadyStored?.length > 0){
                 for (let s of alreadyStored){
                     if (s.id === item.id){
                         s.quantity = s.quantity + 1;
@@ -65,12 +65,19 @@ function updateDOM(item){
             }
             console.log(cart);
             addToCart(cart); // Should have more than one item in inventory...
+            // add the animation class
+            addButton.classList.add("addedToCart");
+            setTimeout(removeAnimatedClass, 1500);
         });
     }
 
     return true;
 }
 
+function removeAnimatedClass() {
+    const addButton = document.getElementById("addToChart");
+    addButton.classList.remove("addedToCart");
+}
 
 
 

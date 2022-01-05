@@ -6,6 +6,10 @@
   --color-theme-light: #90acc0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #ffffff;
   color: var(--color-text);
@@ -25,7 +29,7 @@ nav {
     "logo hamburger"
     "menu menu";
   background: linear-gradient(to right, var(--color-theme-light), var(--color-theme));
-  padding: 10px;
+  padding: 4px;
 }
 #topleftlogo {
   grid-area: logo;
@@ -75,6 +79,47 @@ label[for="hamburger-menu"] {
   margin-bottom: 4vh;
 }
 
+#filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4vh 0vw;
+  gap: 20px;
+  width: 80vw;
+  position: relative;
+  left: 10vw;
+}
+#filters .filter {
+  place-self: center;
+  text-align: center;
+  background: var(--color-theme-light);
+  color: var(--color-text);
+  padding: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+}
+
+#filters .filter.selected {
+  background: var(--color-cta);
+}
+
+#searchHolder {
+  place-self: center;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+}
+
+.searchButton {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-theme);
+  font-size: 1rem;
+  transform: translate(-110%, 10%);
+}
+
 #subnav form {
   float: right;
 }
@@ -86,16 +131,11 @@ input {
   border: 2px solid var(--color-text);
 }
 
-.breadcrumb {
-  float: left;
-}
-
 main {
   clear: both;
 }
 
 .mainimage {
-  margin-top: 20px;
   background: url("../images/hovedbilde.jpg");
   min-height: 65vh;
   background-size: cover;
@@ -104,9 +144,15 @@ main {
   padding: 30px;
 }
 
+.mainimage h1 {
+  color: #744d02;
+  -webkit-text-stroke: 1px #b9a072;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .buttoncontainer {
@@ -141,10 +187,13 @@ h1 {
 
 footer {
   background: var(--color-theme);
-  margin-top: 10vh;
-  padding: 20px;
+  padding: 40px 20px;
   color: #ffffff;
   text-align: center;
+}
+
+footer #footerlogo {
+  width: 180px;
 }
 
 div.three_column section:first-child {
@@ -298,6 +347,7 @@ label {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
 }
+
 .subtotal {
   border-top: 2px solid var(--color-theme);
 }
@@ -329,9 +379,11 @@ label {
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
-
+  .buttoncontainer {
+    margin: 0vh 0vw;
+  }
   .btn {
     font-size: 1.5rem;
     padding: 1vh 5vw;
@@ -386,7 +438,7 @@ label {
 
   #checkout_form {
     grid-template-columns: 1fr 1fr;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   h3 {
@@ -458,7 +510,18 @@ label {
   }
 
   #gallery {
+    margin: 10vh 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .buttoncontainer {
+    margin: 0;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 1vh 5vw;
+    border-radius: 40px;
   }
 
   #footerlogo {
@@ -543,5 +606,28 @@ label {
     width: 100%;
     height: 300px;
     object-fit: cover;
+  }
+}
+
+.addedToCart::before {
+  content: "+";
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  right: 50%;
+  top: 50%;
+  background: var(--color-cta);
+  border-radius: 50%;
+  animation: added 0.5s ease forwards;
+}
+
+@keyframes added {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 5vh;
+    right: 7vw;
   }
 }

@@ -43,7 +43,7 @@
             <a href="./contact.html"><i class="fas fa-book-open"></i><span>Contact</span></a>
           </li>
           <li>
-            <a href="./wishlist.html"><i class="fas fa-heart"></i><span>Wish list</span></a>
+            <a href="./listofjackets.html"><i class="fas fa-heart"></i><span class="linkname">Shop</span></a>
           </li>
           <li>
             <a href="./login.html"><i class="fas fa-user-circle"></i><span>Log in</span></a>
@@ -53,15 +53,6 @@
           </li>
         </ul>
       </nav>
-      <aside id="subnav">
-        <span class="breadcrumb">Home / Checkout</span>
-        <form onSubmit="" action="" method="" autocomplete="off">
-          <input type="text" placeholder="Search..." id="searchbar" />
-          <button id="submitbutton" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-      </aside>
     </header>
     <main>
       <!-- Added the form to wrap the whole page  -->
@@ -69,18 +60,10 @@
         <section>
           <div class="one_grid">
             <h3>Review Your shopping bag</h3>
-            <section class="item_list">
-              <img src="../images/Jacket list back.jpg" class="inshoppingbag" />
-              <div class="order_description">
-                <p>RAINYDAYS Jacket title</p>
-                <p>Size: M</p>
-                <p>Quanitiy: 1</p>
-              </div>
-            </section>
+            <section id="item_list_container"></section>
             <section class="item_list_pricing">
-              <p><span>Jacket title</span><span>799,-</span></p>
               <p><span>Shipping fees</span><span>99,-</span></p>
-              <p class="subtotal"><span>Total cost</span><span>898,-</span></p>
+              <p class="subtotal"><span>Total cost</span><span id="totalPrice"></span></p>
             </section>
           </div>
           <div class="one_grid">
@@ -102,25 +85,25 @@
         <section>
           <div class="one_grid">
             <h3>Billing and Shipping information</h3>
-            <label for="fname">First name</label>
+            <label for="fname">First name*</label>
             <input type="text" name="fname" id="fname" class="form__input" required />
-            <label for="lname">Last name</label>
+            <label for="lname">Last name*</label>
             <input type="text" name="lname" id="lname" class="form__input" required />
-            <label for="address">Address</label>
+            <label for="address">Address*</label>
             <input type="text" name="address" id="address" class="form__input" required />
-            <label for="postcode">Post code</label>
+            <label for="postcode">Post code*</label>
             <input type="text" name="postcode" id="postcode" class="form__input" required />
-            <label for="city">City</label>
+            <label for="city">City*</label>
             <input type="text" name="city" id="city" class="form__input" required />
-            <label for="country">Country</label>
+            <label for="country">Country*</label>
             <input type="text" name="country" id="country" class="form__input" required />
             <label for="mobile">Mobile</label>
-            <input type="tel" name="mobile" id="mobile" class="form__input" required />
-            <label for="email">Email</label>
+            <input type="tel" name="mobile" id="mobile" class="form__input" />
+            <label for="email">Email*</label>
             <input type="email" name="email" id="email" class="form__input" required />
             <p>* Required field</p>
-            <a href="./checkoutsuccess.html" class="btn">Place order</a>
-            <!-- <button class="cta btn" type="submit">Place order</button> -->
+            <button type="button" class="btn" id="emptyCart">Empty cart</button>
+            <button class="cta btn" type="submit">Place order</button>
           </div>
         </section>
       </form>
@@ -150,5 +133,8 @@
         </section>
       </div>
     </footer>
+    <script src="/js/inventory.js"></script>
+    <script src="/js/storage.js"></script>
+    <script src="/js/checkout.js"></script>
   </body>
 </html>

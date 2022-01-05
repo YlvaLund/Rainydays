@@ -13,6 +13,18 @@ raincoats = [
     {id: 12, name: 'Adventure time', price: 1275, image: '/images/inventory/012.jfif', alt: 'alternativ beskrivelse for bildet', description: 'When everest calls, this is for you.', stock: 20, category: 'men'}
 ]
 
+function getItem(id) {
+    if (raincoats?.length > 0){
+        for (let r of raincoats){
+            if (r.id === id){
+                return r;
+            }
+        }
+    }
+
+    return false;
+}
+
 function removeFromStorage(id){
     for (let i = 0; i < raincoats.length; i++){
         if (raincoats[i].id === id){
