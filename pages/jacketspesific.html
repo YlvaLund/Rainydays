@@ -66,18 +66,17 @@
     <main class="item_container">
       <section>
         <div>
-          <img src="../images/Jacket list back.jpg" alt="jacket specific back" />
+          <img src="../images/Jacket list back.jpg" alt="jacket specific back" id="itemImageA" />
         </div>
         <div>
-          <img src="../images/Jacket list front.jpg" alt="jacket specific front" />
+          <img src="../images/Jacket list front.jpg" alt="jacket specific front" id="itemImageB" />
         </div>
       </section>
       <section>
         <div>
-          <h1>Jacket title</h1>
-          <p>Price: 799,-</p>
-          <p>Description: Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+          <h1 id="itemName"></h1>
+          <p>Price: <span id="itemPrice"></span>,-</p>
+          <p id="itemDescription"></p>
         </div>
         <div>
           <p>Select size:</p>
@@ -88,7 +87,7 @@
           <input type="radio" name="size" value="xl" id="xl" /><label for="xl">XL</label> <input type="radio" name="size" value="xxl" id="xxl" /><label for="xxl">XXL</label>
         </div>
         <button class="cta btn" type="submit">Add to wish list</button>
-        <a href="./checkout.html"><button class="cta btn">Add to Cart</button></a>
+        <button class="cta btn" id="addToChart" type="button">Add to Cart</button>
       </section>
     </main>
 
@@ -116,5 +115,8 @@
         </section>
       </div>
     </footer>
+    <script src="/js/inventory.js"></script>
+    <script src="/js/storage.js"></script>
+    <script src="../js/cartHolder.js"></script>
   </body>
 </html>

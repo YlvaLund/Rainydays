@@ -20,7 +20,8 @@ function setup() {
             </div>
             */
             let itemContainer = document.createElement("div");
-            itemContainer.innerHTML = `<img src="${r.image}" alt="${r.alt}" /><p>${r.name}</p><p>${r.price}</p>`;
+            
+            itemContainer.innerHTML = `<a href="/pages/jacketspesific.html?item=${r.id}"><img src="${r.image}" alt="${r.alt}" /><p>${r.name}</p><p>${r.price}</p></a>`;
             jacketContainer.appendChild(itemContainer);
         }
     }
