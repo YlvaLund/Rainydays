@@ -2,6 +2,7 @@ let params = new URLSearchParams(window.location.search);
 let itemId = params.get("item");
 itemId = parseInt(itemId);
 let triggered = false;
+const counter = document.getElementById("cartCounter");
 
 for (let i = 0; i < raincoats.length; i++){
     if (raincoats[i].id === itemId){
@@ -13,6 +14,22 @@ if (!triggered){
     history.back()
 }
 
+function hideCart() {
+    console.log(counter);
+    counter.style.opacity = 0;
+}
+
+function updateCart() {
+    let cart = getStoredCart();
+    let numberOfItems = 0;
+    if (cart?.length > 0){
+        for (let i of cart){
+            numberOfItems += i.quantity;
+        }
+    }
+    counter.innerText = numberOfItems;
+}
+
 function updateDOM(item){
     if (typeof item?.id === 'undefined'){
         return false;
@@ -20,15 +37,13 @@ function updateDOM(item){
     const nameHolder = document.getElementById("itemName");
     const priceHolder = document.getElementById("itemPrice");
     const descriptionHolder = document.getElementById("itemDescription");
-    const imageHolderA = document.getElementById("itemImageA");
-    const imageHolderB = document.getElementById("itemImageB");
+    const imageHolderA = document.getElementById("itemImageA"); 
     const addButton = document.getElementById("addToChart");
 
     nameHolder.innerText = item?.name;
     priceHolder.innerText = item?.price;
     descriptionHolder.innerText = item?.description;
     imageHolderA.src = item?.image;
-    imageHolderB.src = item?.image;
 
     /* Update the add to cart button */
     if (item.stock <= 0){
@@ -67,14 +82,20 @@ function updateDOM(item){
             addToCart(cart); // Should have more than one item in inventory...
             // add the animation class
             addButton.classList.add("addedToCart");
-            setTimeout(removeAnimatedClass, 1500);
+            setTimeout(removeAnimatedClass, 1000);
         });
     }
 
     return true;
 }
 
+let startCart = getStoredCart();
+if (startCart?.length === 0 ||  startCart === null){
+    hideCart();
+}
+
 function removeAnimatedClass() {
+    updateCart();
     const addButton = document.getElementById("addToChart");
     addButton.classList.remove("addedToCart");
 }
