@@ -230,7 +230,7 @@ p.three_column {
 
 .item_container {
   display: grid;
-  grid-template-areas: "images content content";
+  grid-template-areas: "images" "content";
   gap: 20px;
   margin-top: 5vh;
   justify-items: center;

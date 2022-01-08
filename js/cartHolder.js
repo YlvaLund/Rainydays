@@ -44,6 +44,7 @@ function updateDOM(item){
     priceHolder.innerText = item?.price;
     descriptionHolder.innerText = item?.description;
     imageHolderA.src = item?.image;
+    imageHolderA.alt = item.alt;
 
     /* Update the add to cart button */
     if (item.stock <= 0){
