@@ -1,4 +1,4 @@
-# Your project title
+# Rainydays - School project
 
 ![image](https://ylvalund.com/img/rainydays.jpg)
 
