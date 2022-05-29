@@ -33,7 +33,7 @@ After you have downloaded the files you can just start a live-server or open the
 ## Contact
 
 Please feel free to checkout my other works at:
-[My homepage](www.ylvalund.com)
+[My homepage](https://www.ylvalund.com)
 
 View my GitHub page:
 [My Github page](https://github.com/YlvaLund)
